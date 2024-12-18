@@ -36,9 +36,14 @@ function checkIt(){
 function success(){
     score1++;
     back.style.backgroundColor = "green"
-    setTimeout(()=>{
-        back.style.backgroundColor = "black"
-    },900)
+    if (score1===8){
+        back.style.backgroundColor = "green"
+    }else{
+        back.style.backgroundColor = "green"
+        setTimeout(()=>{
+            back.style.backgroundColor = "black"
+        },900)
+    }
     score.style.backgroundColor = "green"
     score.classList.add("shadow")
     h3.style.color = "green"
