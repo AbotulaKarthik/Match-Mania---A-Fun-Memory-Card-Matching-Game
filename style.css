@@ -1,0 +1,115 @@
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+    color: yellow;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-shadow: 3px 2px 4px white;
+}
+.container{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.box{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 40%;
+    padding: 5px;
+    border-radius: 9px;
+}
+.card{
+    width: 23%;
+    height: 175px;
+    border-radius: 5px;
+    margin-top: 8px;
+    overflow: hidden;
+    background-color: black;
+    box-shadow: 3px 3px 9px rgb(255, 255, 118);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    perspective: 1000px;
+}
+.card img{
+    width: 65%;
+    height: 65%;
+    object-fit: fill;
+    align-self: center;
+    margin-left: 21px;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 0.6s ease;
+}
+.back-image {
+    transform: rotateY(0deg);
+    z-index: 2;
+}
+
+.front-image {
+    transform: rotateY(-180deg);
+    z-index: 1;
+}
+
+.card.flip .back-image {
+    transform: rotateY(180deg);
+}
+
+.card.flip .front-image {
+    transform: rotateY(0deg);
+}
+.scoreBoard{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    text-shadow: 1px 1px 2px white;
+}
+.score{
+    margin-top: 10px;
+    width: 200px;
+    height: 50px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.shadow{
+    box-shadow: 2px 2px 9px white;
+}
+@media screen and (max-width:500px) {
+    .box{
+        width: 90%;
+        margin-top: 100px;
+    }
+    .card{
+        width: 24%;
+        height: 100px;
+        box-shadow: 2px 2px 4px rgb(217, 255, 81);
+    }
+    .h1{
+        font-size: 1.8rem;
+        margin-top: 100px;
+    }
+    .score{
+        width: 160px;
+        height: 40px;
+    }
+    .h3{
+        font-size: 1.6rem;
+    }
+}
